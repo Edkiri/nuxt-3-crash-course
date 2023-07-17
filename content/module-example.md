@@ -36,8 +36,7 @@
   * [X] Modules.
     * Available [list](https://nuxt.com/modules) of modules created by Nuxt team and community. See his individual docs for how to use.
     * You can also [create](https://nuxt.com/docs/guide/directory-structure/modules) your own modules.
-  * [X] Install and config content module.
-    * .md file must be named equals to component.
+  * [ ] Install and config content module.
   * [ ] State managment.
   * [ ] SSR, SWR & Hybrid.
   * [ ] Server.

@@ -10,5 +10,8 @@
       <li>
         <NuxtLink to="/custom">Custom</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/module-example">Example</NuxtLink>
+      </li>
   </ul>
 </header></template>
