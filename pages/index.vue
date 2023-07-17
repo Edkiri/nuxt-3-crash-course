@@ -10,7 +10,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 const { sayHello } = useUtils();
 sayHello();
+
+const { $hello } = useNuxtApp();
+console.log($hello("there"));
 </script>

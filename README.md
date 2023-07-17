@@ -33,7 +33,10 @@
     * Route middleware run within the Vue part of your Nuxt app. Despite the similar name, they are completely different from server middleware, which are run in the Nitro server part of your app.
     * [When middlewares runs?](https://nuxt.com/docs/guide/directory-structure/middleware#when-middleware-runs)
     * [Adding Middleware Dynamically](https://nuxt.com/docs/guide/directory-structure/middleware#adding-middleware-dynamically).
-  * [ ] Modules.
+  * [X] Modules.
+    * Available [list](https://nuxt.com/modules) of modules created by Nuxt team and community. See his individual docs for how to use.
+    * You can also [create](https://nuxt.com/docs/guide/directory-structure/modules) your own modules.
+  * [ ] Install and config Eslint module for Nuxt.
   * [ ] State managment.
   * [ ] SSR, SWR & Hybrid.
   * [ ] Server.
