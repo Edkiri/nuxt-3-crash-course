@@ -14,6 +14,9 @@
     * Nested components like components/Profile/Header/index.vue accessible by "ProfileHeader".
     * Remember that nesting many components means very long names.
   * [ ] Layouts.
+    * layouts/default.vue is the default layout.
+    * `<slot />` used as React {children} prop.
+    * `definePageMeta({ layout: "custom" });` on script to choose 'custom' layout.
   * [ ] Images & assets.
   * [ ] Composable.
   * [ ] Plugins.
