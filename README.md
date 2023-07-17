@@ -11,13 +11,16 @@
     * `<NuxtLink to="/">Home</NuxtLink>` built in component to navigate.
   * [X] Components.
     * Components auto-imported through all app from components/ folder.
-    * Nested components like components/Profile/Header/index.vue accessible by "ProfileHeader".
+    * Nested components like `components/Profile/Header/index.vue` accessible by `<ProfileHeader />`.
     * Remember that nesting many components means very long names.
   * [X] Layouts.
     * layouts/default.vue is the default layout.
     * `<slot />` used as React {children} prop.
     * `definePageMeta({ layout: "custom" })` on script to choose 'custom' layout.
-  * [ ] Images & assets.
+  * [X] Images & assets.
+    * The `public/` directory is used as a public server for static assets publicly available at a defined URL of your application.
+    * The `assets/` directory contains by convention every asset that you want the build tool (Vite or webpack) to process.
+    * For svgs icons go to [icones.js](https://icones.js.org/) and copy it as vue component.
   * [ ] Composable.
   * [ ] Plugins.
   * [ ] Middlewares.
