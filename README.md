@@ -29,7 +29,10 @@
     * Automatically reads `plugins/` folder to register and load plugins at the creation of the app.
     * Use `.server` or `.client` suffix in the file name to load a plugin only on the server or client side.
     * You can provide helpers on the `NuxtApp` instance, return it from the plugin under a `provide` key. [example](https://nuxt.com/docs/guide/directory-structure/plugins#automatically-providing-helpers).
-  * [ ] Middlewares.
+  * [X] Middlewares.
+    * Route middleware run within the Vue part of your Nuxt app. Despite the similar name, they are completely different from server middleware, which are run in the Nitro server part of your app.
+    * [When middlewares runs?](https://nuxt.com/docs/guide/directory-structure/middleware#when-middleware-runs)
+    * [Adding Middleware Dynamically](https://nuxt.com/docs/guide/directory-structure/middleware#adding-middleware-dynamically).
   * [ ] Modules.
   * [ ] State managment.
   * [ ] SSR, SWR & Hybrid.
