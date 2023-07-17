@@ -3,7 +3,13 @@
     * Base template app using 'npx nuxi@latest init'.
     * Set root '@' alias on 'nuxt.config.ts'.
     * Install and config tailwind following [framework guide](https://tailwindcss.com/docs/guides/nuxtjs).
-  * [ ] Pages & Routing.
+  * [X] Pages & Routing.
+    * Every Vue file inside the pages/ directory creates a corresponding URL (or route) that displays the contents of the file. (it's based on vue-router).
+    * Create nested routes by creting folders.
+    * Create nested details by [id] then access '{{ $routes.params.id }}' on template.
+    * To access route in script use 'const route = useRoute()'.
+    * '<NuxtLink></NuxtLink>' built in component to navigate.
+  * [ ] Read about [useNuxtApp](https://nuxt.com/docs/api/composables/use-nuxt-app#usenuxtapp)
   * [ ] Components.
   * [ ] Layouts.
   * [ ] Images & assets.
