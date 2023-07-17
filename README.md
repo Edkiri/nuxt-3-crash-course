@@ -21,7 +21,10 @@
     * The `public/` directory is used as a public server for static assets publicly available at a defined URL of your application.
     * The `assets/` directory contains by convention every asset that you want the build tool (Vite or webpack) to process.
     * For svgs icons go to [icones.js](https://icones.js.org/) and copy it as vue component.
-  * [ ] Composable.
+  * [X] Composable.
+    * Used like hooks in React.
+    * Like componenets and pages, all composables are auto-imported from `composables/` folder.
+    * [VueUse](https://vueuse.org/guide/) is a collection of utility functions based on Composition API. It has `onClickOutside` for example.
   * [ ] Plugins.
   * [ ] Middlewares.
   * [ ] Modules.
