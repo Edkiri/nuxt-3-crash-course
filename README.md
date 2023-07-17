@@ -4,7 +4,7 @@
     * Set root '@' alias on `nuxt.config.ts`.
     * Install and config tailwind following [framework guide](https://tailwindcss.com/docs/guides/nuxtjs#3).
   * [X] Pages & Routing.
-    * Every Vue file inside the pages/ directory creates a corresponding URL (or route) that displays the contents of the file. (it's based on vue-router).
+    * Every Vue file inside the `pages/` directory creates a corresponding URL (or route) that displays the contents of the file. (it's based on vue-router).
     * Create nested routes by creting folders.
     * Create nested details by [id] then access `{{ $routes.params.id }}` on template.
     * To access route in script use `const route = useRoute()`.
@@ -25,7 +25,10 @@
     * Used like hooks in React.
     * Like componenets and pages, all composables are auto-imported from `composables/` folder.
     * [VueUse](https://vueuse.org/guide/) is a collection of utility functions based on Composition API. It has `onClickOutside` for example.
-  * [ ] Plugins.
+  * [X] Plugins.
+    * Automatically reads `plugins/` folder to register and load plugins at the creation of the app.
+    * Use `.server` or `.client` suffix in the file name to load a plugin only on the server or client side.
+    * You can provide helpers on the `NuxtApp` instance, return it from the plugin under a `provide` key. [example](https://nuxt.com/docs/guide/directory-structure/plugins#automatically-providing-helpers).
   * [ ] Middlewares.
   * [ ] Modules.
   * [ ] State managment.
@@ -34,12 +37,13 @@
   * [ ] Nitro.
   * [ ] useFetch, useLazyFetch.
   * [ ] useAsyncData.
-  * [ ] Read about [useNuxtApp](https://nuxt.com/docs/api/composables/use-nuxt-app#usenuxtapp)
   * [ ] SEO & Metas.
   * [ ] Lifecycles hooks.
   * [ ] Config.
   * [ ] Nuxt-content.
   * [ ] Full-Stack app: docs + API.
+  * [ ] Read about [useNuxtApp](https://nuxt.com/docs/api/composables/use-nuxt-app#usenuxtapp)
+  * [ ] See more nuxt plugins examples.
 
 ## Setup
 
