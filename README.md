@@ -1,5 +1,8 @@
 # Learning Nuxt 3
-  * [ ] Create an app.
+  * [X] Create an app.
+    * Base template app using 'npx nuxi@latest init'.
+    * Set root '@' alias on 'nuxt.config.ts'.
+    * Install and config tailwind following [framework guide](https://tailwindcss.com/docs/guides/nuxtjs).
   * [ ] Pages & Routing.
   * [ ] Components.
   * [ ] Layouts.
