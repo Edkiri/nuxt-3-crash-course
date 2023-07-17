@@ -1,6 +1,24 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+# Learning Nuxt 3
+  * [ ] Create an app.
+  * [ ] Pages & Routing.
+  * [ ] Components.
+  * [ ] Layouts.
+  * [ ] Images & assets.
+  * [ ] Composable.
+  * [ ] Plugins.
+  * [ ] Middlewares.
+  * [ ] Modules.
+  * [ ] State managment.
+  * [ ] SSR, SWR & Hybrid.
+  * [ ] Server.
+  * [ ] Nitro.
+  * [ ] useFetch, useLazyFetch.
+  * [ ] useAsyncData.
+  * [ ] SEO & Metas.
+  * [ ] Lifecycles hooks.
+  * [ ] Config.
+  * [ ] Nuxt-content.
+  * [ ] Full-Stack app: docs + API.
 
 ## Setup
 
