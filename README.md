@@ -130,6 +130,18 @@
     * The handler can directly return JSON data, a `Promise` or use `event.node.res.end()` to send a response.
   * [X] [Nitro](https://nitro.unjs.io/guide/getting-started).
   * [ ] SSR, SWR & Hybrid.
+    * [Universal rendering](https://nuxt.com/docs/guide/concepts/rendering#universal-rendering)
+      * Making a static page interactive in the browser is called `Hydration`
+      * Universal rendering allows a Nuxt application to provide quick page load times while preserving the benefits of client-side rendering. Furthermore, as the content is already present in the HTML document, crawlers can index it without overhead.
+    * [Client-Side Rendering](https://nuxt.com/docs/guide/concepts/rendering#client-side-rendering)
+      * You can enable client-side only rendering with Nuxt in your `nuxt.config.ts`:
+        ```ts
+          export default defineNuxtConfig({
+            ssr: false
+          })
+    * [Hybrid Rendering](https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering)
+      * Previously every route/page of a Nuxt application and server must use the same rendering mode, universal or client-side.
+      * In various cases, some pages could be generated at build time, while others should be client-side rendered.
   * [ ] useFetch, useLazyFetch.
   * [ ] useAsyncData.
   * [ ] SEO & Metas.
