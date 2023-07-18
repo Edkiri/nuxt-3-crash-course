@@ -11,7 +11,10 @@
         <NuxtLink to="/custom">Custom</NuxtLink>
       </li>
       <li>
-        <NuxtLink to="/module-example">Example</NuxtLink>
+        <NuxtLink to="/module-example">Content</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/counter">Counter</NuxtLink>
       </li>
   </ul>
 </header></template>

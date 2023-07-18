@@ -39,6 +39,32 @@
   * [X] Install and config content module.
     * .md file must be named equals to component.
   * [ ] State managment.
+    * `useState` is an SSR-friendly `ref` replacement. Its value will be preserved after server-side rendering (during client-side hydration) and shared across all components using a unique key.
+    * `const counter = useState('counter', () => 0)`
+    * ## [Pinia vs useState](https://www.vuemastery.com/blog/nuxt-3-state-mangement-pinia-vs-usestate/)
+    * ### `ref` vs `useState`
+      * ##### Cross-Request State Pollution
+        * When using server-side rendering (SSR), each new request is executed inside of the same application.
+        * And because we only have one singleton state object, every request will share the same state.
+        * It creates the potential for leaked data, security vulnerabilities, and hard-to-pin-down bugs.
+        * We can use `useState` and get around that issue.
+      * ##### State Hydration
+        * When using server-side rendering with Nuxt, our app is first executed on the server to generate the initial HTML.
+        * There’s a good chance we might want to use a `ref` during that initialization of our components: `const count = ref(getStoredCount())`
+        * Once the app is booted up on the client, we’ll have to re-run all of this initialization code.
+        * None of these variables are set, so we have to execute the code to figure out what they should be.
+        * This is where hydration comes in.
+        * We take the state we’ve already computed on the server and send it along with the app’s HTML, CSS...
+        * Then, instead of re-calculating everything, we can pick up where we left off!
+        * `useState` will automatically perform this optimization without us even thinking about it.
+      * ##### Easier state sharing
+        * As your app grows, you’ll find that some state needs to be accessed in almost every component.
+        * Things like: A user’s unique id or accountId. A list of features or permissions the current user can access...
+        * Instead of passing props around endlessly, we turn to global state management libraries like `Vuex` or `Pinia…` or even `useState`.
+        * ```ts 
+          // No matter where we are, this state will be the same
+          const theme = useState<string>('activeFeatures', () => 'dark')
+        * This is something that `ref` can’t do!
   * [ ] SSR, SWR & Hybrid.
   * [ ] Server.
   * [ ] Nitro.
