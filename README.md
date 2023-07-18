@@ -76,7 +76,7 @@
       * ##### Stores for organization
         * A store in Pinia is a reactive object along with actions and getters.
         * Stores in Pinia can also use other stores.
-        * ```ts
+        ```ts
             import { defineStore } from 'pinia'
             import { useThemeStore } from './theme'
 
@@ -88,6 +88,7 @@
                 };
               },
             })
+          ```
         * Here we can use our theme store inside of our user store.
         * Something that `useState` doesn’t offer unless you build it yourself.
       * ##### Actions and Getters
@@ -116,11 +117,13 @@
               }
             },
           })
+        ```
         * And use it
-          ```ts
-            const store = useUserStore();
-            store.updateFirstName('Edu');
-            console.log(store.fullName);
+        ```ts
+          const store = useUserStore();
+          store.updateFirstName('Edu');
+          console.log(store.fullName);
+        ```
   * [ ] SSR, SWR & Hybrid.
   * [ ] Server.
   * [ ] Nitro.
