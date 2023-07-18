@@ -16,5 +16,8 @@
       <li>
         <NuxtLink to="/counter">Counter</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/pinia-store">Pinia</NuxtLink>
+      </li>
   </ul>
 </header></template>

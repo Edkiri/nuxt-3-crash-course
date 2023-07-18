@@ -38,7 +38,7 @@
     * You can also [create](https://nuxt.com/docs/guide/directory-structure/modules) your own modules.
   * [X] Install and config content module.
     * .md file must be named equals to component.
-  * [ ] State managment.
+  * [X] State managment.
     * `useState` is an SSR-friendly `ref` replacement. Its value will be preserved after server-side rendering (during client-side hydration) and shared across all components using a unique key.
     * `const counter = useState('counter', () => 0)`
     * ## [Pinia vs useState](https://www.vuemastery.com/blog/nuxt-3-state-mangement-pinia-vs-usestate/)
