@@ -65,6 +65,62 @@
           // No matter where we are, this state will be the same
           const theme = useState<string>('activeFeatures', () => 'dark')
         * This is something that `ref` can’t do!
+    * ### So why use something like `Pinia`?
+      * Pinia is what you get if you took `useState` and kept adding more and more practical features.
+      * If you don’t use Pinia, there’s a good chance you’ll find yourself re-inventing it and building your own state management library. 
+      * ##### Devtools integration
+        * With Pinia, we get first-class Vue Devtools support.
+        * We get a timeline of state changes, so we can see how our state updates over time.
+        * We can see all the stores at once, or we can also see the stores alongside any component that is using it.
+        * We get time-travel debugging. This lets us go back in history and replay the state changes in our application.
+      * ##### Stores for organization
+        * A store in Pinia is a reactive object along with actions and getters.
+        * Stores in Pinia can also use other stores.
+        * ```ts
+            import { defineStore } from 'pinia'
+            import { useThemeStore } from './theme'
+
+            export const useUserStore = defineStore('user', {
+              state: () => {
+                return {
+                  name: 'User'
+                  theme: useThemeStore(),
+                };
+              },
+            })
+        * Here we can use our theme store inside of our user store.
+        * Something that `useState` doesn’t offer unless you build it yourself.
+      * ##### Actions and Getters
+        * State is never static, and it’s nice to be able to define specific ways that our state can change through methods.
+        * Pinia also lets us define getters, which are convenient functions for dealing with our state.
+        * ```ts
+          import { defineStore } from 'pinia'
+
+          export const useUserStore = defineStore('user', {
+            state: () => {
+              return {
+                firstName: 'First',
+                lastName: 'Last',
+              };
+            },
+            actions: {
+              updateFirstName(firstName) {
+                if (firstName !== '') {
+                  this.firstName = firstName;
+                }
+              },
+            },
+            getters: {
+              fullName() {
+                return `${this.firstName} ${this.lastName}`;
+              }
+            },
+          })
+        * And use it
+          * ```ts
+              const store = useUserStore();
+              store.updateFirstName('Edu');
+              console.log(store.fullName);
   * [ ] SSR, SWR & Hybrid.
   * [ ] Server.
   * [ ] Nitro.
