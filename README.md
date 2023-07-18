@@ -93,7 +93,7 @@
       * ##### Actions and Getters
         * State is never static, and it’s nice to be able to define specific ways that our state can change through methods.
         * Pinia also lets us define getters, which are convenient functions for dealing with our state.
-        * ```ts
+        ```ts
           import { defineStore } from 'pinia'
 
           export const useUserStore = defineStore('user', {
@@ -117,10 +117,10 @@
             },
           })
         * And use it
-          * ```ts
-              const store = useUserStore();
-              store.updateFirstName('Edu');
-              console.log(store.fullName);
+          ```ts
+            const store = useUserStore();
+            store.updateFirstName('Edu');
+            console.log(store.fullName);
   * [ ] SSR, SWR & Hybrid.
   * [ ] Server.
   * [ ] Nitro.
