@@ -19,5 +19,8 @@
       <li>
         <NuxtLink to="/pinia-store">Pinia</NuxtLink>
       </li>
+      <li>
+        <NuxtLink to="/server">Server</NuxtLink>
+      </li>
   </ul>
 </header></template>
